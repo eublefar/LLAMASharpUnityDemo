@@ -28,8 +28,6 @@ public class LLamaSharpTestScript : MonoBehaviour
         });
         Output.text = "User: ";
         var bobPrompt = "Transcript of a dialog, where the User interacts with an Assistant named Bob. Bob is helpful, kind, honest, good at writing, and never fails to answer the User's requests immediately and with precision.\r\n\r\nUser: Hello, Bob.\r\nBob: Hello. How may I help you today?\r\nUser: Please tell me the largest city in Europe.\r\nBob: Sure. The largest city in Europe is Moscow, the capital of Russia.\r\nUser:"; // use the "chat-with-bob" prompt here.
-        var billPrompt = "Transcript of a dialog, where the User interacts with an Assistant named Bob. Bill speaks in cockney english is angry, dishonest, and bad at writing.\r\n\r\nUser: Hello, Bill.\r\nBob: Alright, wanker.\r\nUser: Please tell me the largest city in Europe.\r\nBob: It's your bloody mom.\r\nUser:"; 
-
         // Load a model
         var parameters = new ModelParams(Application.streamingAssetsPath + "/" + ModelPath)
         {
