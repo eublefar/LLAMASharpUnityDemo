@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata minClientVersion="2.12">
+    <id>System.Linq.Async</id>
+    <version>6.0.1</version>
+    <title>System.Linq.Async</title>
+    <authors>.NET Foundation and Contributors</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Logo.png</icon>
+    <projectUrl>https://github.com/dotnet/reactive</projectUrl>
+    <description>Provides support for Language-Integrated Query (LINQ) over IAsyncEnumerable&lt;T&gt; sequences.</description>
+    <copyright>Copyright (c) .NET Foundation and Contributors.</copyright>
+    <tags>LINQ async streams query</tags>
+    <repository type="git" url="https://github.com/dotnet/reactive" commit="8d8c10ceb7cc0bdb1e49b362efe5826e577dfeff" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+  </metadata>
+</package>
