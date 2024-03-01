@@ -14,10 +14,10 @@ Note: You only need single `.gguf` file. Files there usually differ by their qua
 
 ### Overview
 
-This project contains a single scene with a simple chat UI.  
-Monobehaviour that powers is named `LLamaSharpTestScript` and it's already added and set up in `Example` GameObject.
+This project contains a single scene at `Assets/Scenes/SampleScene.unity` with a simple chat UI.  
+Monobehaviour that has all the logic is named `LLamaSharpTestScript` and it's already added and set up in `Example` GameObject.
 
-It generally follows LLAMASharp readme example.
+It generally follows LLAMASharp readme example and shows how to switch between different chat sessions.
 
 Before running the project you should point `LLamaSharpTestScript.ModelPath` from the inspector to your model path in `StreamingAssets`.
 
@@ -36,7 +36,8 @@ Additionally this project uses the following packages:
   - [CPU](https://www.nuget.org/packages/LLamaSharp.Backend.Cpu)
   - [CUDA 11](https://www.nuget.org/packages/LLamaSharp.Backend.Cuda11)
   - [CUDA 12](https://www.nuget.org/packages/LLamaSharp.Backend.Cuda12)
-- Unpack using ZIP, move `runtimes/<your runtime>/libllama.dll` to your Unity project Assets.  
+- Unpack using ZIP, move `runtimes/<your runtime>/libllama.dll` to your Unity project Assets.
+  (Note: dll must be called `libllama.dll` to be found. If it's named `llama.dll` - rename it when adding to the Unity project.)
 - Move the model to the StreamingAssets folder
 
 At this point you should be able to copy example from this project and run it in yours.
