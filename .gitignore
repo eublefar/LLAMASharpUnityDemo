@@ -73,5 +73,6 @@ crashlytics-build.properties
 
 # Other
 *.gguf
+*.gguf.meta
 .vscode
 .vsconfig
