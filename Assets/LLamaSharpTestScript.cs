@@ -143,7 +143,15 @@ public class LLamaSharpTestScript : MonoBehaviour
             // Skip system prompt
             if (message.AuthorRole != AuthorRole.System)
             {
-                Output.text += message.Content + "\n";
+                // Do not add a new line to the last message
+                if (!message.Content.Trim().EndsWith("User:"))
+                {
+                    Output.text += message.Content + "\n";
+                }
+                else
+                {
+                    Output.text += message.Content;
+                }
             }
         }
     }
