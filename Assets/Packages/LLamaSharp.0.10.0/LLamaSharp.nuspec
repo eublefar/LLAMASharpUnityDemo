@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>LLamaSharp</id>
+    <version>0.10.0</version>
+    <authors>Yaohui Liu, Martin Evans, Haiping Chen</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <iconUrl>https://avatars3.githubusercontent.com/u/44989469?s=200&amp;v=4</iconUrl>
+    <description>The .NET binding of LLama.cpp, making LLM inference and deployment easy and fast. For model
+      weights to run, please go to https://github.com/SciSharp/LLamaSharp for more information.</description>
+    <releaseNotes>LLamaSharp 0.10.0 supports automatically device feature detection, adds integration with kernel-memory and fixes some performance issues.</releaseNotes>
+    <copyright>MIT, SciSharp STACK 2024</copyright>
+    <tags>LLama, LLM, GPT, ChatGPT, NLP, AI, Chat Bot, SciSharp</tags>
+    <repository type="git" url="https://github.com/SciSharp/LLamaSharp" commit="9bc129e252a87cdeb795366a6c1b423cf74f2cbb" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0">
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Async" version="6.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="8.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
