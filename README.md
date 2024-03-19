@@ -39,5 +39,14 @@ Additionally this project uses the following packages:
 - Unpack using ZIP, move `runtimes/<your runtime>/libllama.dll` to your Unity project Assets.
   (Note: dll must be called `libllama.dll` to be found. If it's named `llama.dll` - rename it when adding to the Unity project.)
 - Move the model to the StreamingAssets folder
+- Move `LLamaSharpBuildPostprocessor` into your project, or write your own for targets other than windows (see `Build and distribution`).
+- Download CUDA Runtime dlls and add them to your project to be able to run the build on systems w/o CUDA installed. 
+For Windows-x64 target you can download them from llama.cpp releases [here](https://github.com/ggerganov/llama.cpp/releases), you need files named cudart-llama-bin-win-cu#.#.#-x64.zip where #.#.# is your LLamaSharp backend's CUDA version.
 
 At this point you should be able to copy example from this project and run it in yours.
+
+## Build and distribution
+
+There is some issue with LLamaSharp finding `libllama.dll` in build's plugin directory.
+As a quick workaround there is `LLamaSharpBuildPostprocessor` that copies libllama.dll into the same directory as the `.exe`.
+It only supports windows build target but you can adapt it to work with other targets, or just resolve this manually each build.
