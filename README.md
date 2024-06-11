@@ -42,6 +42,7 @@ Additionally this project uses the following packages:
 - Move `LLamaSharpBuildPostprocessor` into your project, or write your own for targets other than windows (see `Build and distribution`).
 - Download CUDA Runtime dlls and add them to your project to be able to run the build on systems w/o CUDA installed. 
 For Windows-x64 target you can download them from llama.cpp releases [here](https://github.com/ggerganov/llama.cpp/releases), you need files named cudart-llama-bin-win-cu#.#.#-x64.zip where #.#.# is your LLamaSharp backend's CUDA version.
+- Make sure that your LLAMASharp library and backend are of the same version. Same with CUDA version of LLAMASharp.Backend.CUDA and your installed CUDA (or CUDA RT).
 
 At this point you should be able to copy example from this project and run it in yours.
 
