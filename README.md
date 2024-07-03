@@ -51,3 +51,7 @@ At this point you should be able to copy example from this project and run it in
 There is some issue with LLamaSharp finding `libllama.dll` in build's plugin directory.
 As a quick workaround there is `LLamaSharpBuildPostprocessor` that copies libllama.dll into the same directory as the `.exe`.
 It only supports windows build target but you can adapt it to work with other targets, or just resolve this manually each build.
+
+## Projects using LLamaSharp in Unity
+
+If you have a project using LLamaSharp together with Unity and want it to appear here, please create an issue and I will add it!
